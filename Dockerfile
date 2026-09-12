@@ -1,6 +1,9 @@
-FROM python:3.12-alpine
+FROM python:3.12.14-alpine3.24
 
 WORKDIR /app
+
+# Actualiza las dependencias del sistema operativo
+RUN apk upgrade --no-cache
 
 COPY requirements.txt .
 
